@@ -8,52 +8,139 @@ O arquivo `serializer.py` no Django (com Django rest framework)  é responsável
 
 Abaixo é possível visualizar o código completo e também a explicação em  partes sobre as importações e classes utilizadas no `serializer.py` e suas respectivas funcionalidades.
 
-- a **sidebar**
-- **previous/next navigation**
-- **versioning**
+### Visão Geral dos Serializers
 
-## Create your first Doc
+~~~~python
+from rest_framework import serializers
+from .models import *
 
-Create a Markdown file at `docs/hello.md`:
+class CadastroSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Cadastro
+        fields = '__all__'
 
-```md title="docs/hello.md"
-# Hello
+class DisciplinaSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Disciplinas
+        fields = '__all__'
 
-This is my **first Docusaurus document**!
-```
+class AmbienteSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Ambiente
+        fields = '__all__'
 
-A new document is now available at [http://localhost:3000/docs/hello](http://localhost:3000/docs/hello).
+class TurmaSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Turma
+        fields = '__all__'
 
-## Configure the Sidebar
+class CursoSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Curso
+        fields = '__all__'
+~~~~
+***
 
-Docusaurus automatically **creates a sidebar** from the `docs` folder.
+### Import
 
-Add metadata to customize the sidebar label and position:
+~~~~python 
+from rest_framework import serializers
+from .models import *
+~~~~
+- `from rest_framework import serializers`: Importa o módulo serializers do Django REST Framework, que é usado para transformar dados em formatos como JSON, além de validar e serializar objetos.
 
-```md title="docs/hello.md" {1-4}
----
-sidebar_label: 'Hi!'
-sidebar_position: 3
----
+- `from .models import *`: Traz todos os modelos do arquivo models.py para esse código, para poder ser usado no serializers.
 
-# Hello
+***
 
-This is my **first Docusaurus document**!
-```
+### Class CadastroSerializer
 
-It is also possible to create your sidebar explicitly in `sidebars.js`:
+~~~~python 
+class CadastroSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Cadastro
+        fields = '__all__'
 
-```js title="sidebars.js"
-export default {
-  tutorialSidebar: [
-    'intro',
-    // highlight-next-line
-    'hello',
-    {
-      type: 'category',
-      label: 'Tutorial',
-      items: ['tutorial-basics/create-a-document'],
-    },
-  ],
-};
-```
+~~~~
+
+- `class CadastroSerializer(serializers.ModelSerializer)`: Aqui, está sendo criado um serializer para o modelo Cadastro, que vai transformar os dados desse modelo em JSON e vice-versa.
+
+- `class Meta`: Define metadados para o serializer, informando como ele funcionará. 
+
+
+- `model = Cadastro`:  Aqui ele está especificando para o serializer que ele irá trabalhar com o modelo Cadastro.
+
+- `fields = ‘__all__’ `: Diz para a serializer incluir todos os campos do modelo Cadastro quando ele transformar os dados.
+
+***
+
+### Class DisciplinaSerializer
+
+~~~python
+class DisciplinaSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Disciplinas
+        fields = '__all__'
+~~~
+
+- `class DisciplinaSerializer(serializers.ModelSerializer)`: Aqui, está sendo criado um serializer para o modelo Disciplina, que vai transformar os dados desse modelo em JSON e vice-versa.
+
+- `class Meta`: Define metadados para o serializer, informando como ele funcionará. 
+
+- `model = Disciplinas`: Aqui ele está especificando para o serializer que ele irá trabalhar com o modelo Disciplinas.
+
+- `fields = ‘__all__’`: Diz para a serializer incluir todos os campos do modelo Disciplinas quando ele transformar os dados.
+
+***
+
+### Ambiente Serializer 
+~~~~python
+class AmbienteSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Ambiente
+        fields = '__all__'
+~~~~
+
+- `class AmbienteSerializer(serializers.ModelSerializer)`: Aqui, está sendo criado um serializer para o modelo Ambiente, que vai transformar os dados desse modelo em JSON e vice-versa.
+
+- `class Meta`: Define metadados para o serializer, informando como ele funcionará. 
+
+- `model = Ambiente`: Aqui ele está especificando para o serializer que ele irá trabalhar com o modelo Ambiente.
+
+- `fields = ‘__all__’`: Diz para a serializer incluir todos os campos do modelo Ambiente quando ele transformar os dados.
+
+***
+
+### TurmaSerializer 
+~~~~python
+class TurmaSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Turma
+        fields = '__all__'
+~~~~
+
+- `class TurmaSerializer(serializers.ModelSerializer)`: Aqui, está sendo criado um serializer para o modelo Turma, que vai transformar os dados desse modelo em JSON e vice-versa.
+
+- `class Meta`: Define metadados para o serializer, informando como ele funcionará. 
+
+- `model = Turma`: Aqui ele está especificando para o serializer que ele irá trabalhar com o modelo Turma.
+
+- `fields = ‘__all__’`: Diz para a serializer incluir todos os campos do modelo Turma quando ele transformar os dados.
+
+***
+
+### CursoSerializer 
+~~~~python
+class CursoSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Curso
+        fields = '__all__'
+~~~~
+
+- `class CursoSerializer(serializers.ModelSerializer)`: Aqui, está sendo criado um serializer para o modelo Curso, que vai transformar os dados desse modelo em JSON e vice-versa.
+
+- `class Meta`: Define metadados para o serializer, informando como ele funcionará. 
+
+- `model = Turma`: Aqui ele está especificando para o serializer que ele irá trabalhar com o modelo Curso.
+
+- `fields = ‘__all__’`: Diz para a serializer incluir todos os campos do modelo Curso quando ele transformar os dados.

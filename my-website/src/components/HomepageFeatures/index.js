@@ -5,7 +5,7 @@ import styles from './styles.module.css';
 const FeatureList = [
   {
     title: 'Gabriela Melo',
-    Svg: require('@site/static/img/perfil_gabriela.svg').default,
+    imgSrc: '/img/perfil_gabriela.svg',
     description: (
       <>
         Texto descrevendo o que fez
@@ -14,7 +14,7 @@ const FeatureList = [
   },
   {
     title: 'Geovanna',
-    Svg: require('@site/static/img/perfil_geovanna.svg').default,
+    imgSrc: '/img/geovanna.svg',
     description: (
       <>
         Texto descrevendo o que fez
@@ -23,7 +23,7 @@ const FeatureList = [
   },
   {
     title: 'Letícia Oliveira',
-    Svg: require('@site/static/img/perfil_leticia.svg').default,
+    imgSrc: '/img/perfil_leticia.svg',
     description: (
       <>
         Texto descrevendo o que fez
@@ -32,7 +32,7 @@ const FeatureList = [
   },
   {
     title: 'Raphaela Tavares',
-    Svg: require('@site/static/img/undraw_docusaurus_tree.svg').default,
+    imgSrc: '/img/undraw_docusaurus_tree.svg',
     description: (
       <>
         Texto descrevendo o que fez
@@ -41,11 +41,11 @@ const FeatureList = [
   },
 ];
 
-function Feature({Svg, title, description}) {
+function Feature({ imgSrc, title, description }) {
   return (
     <div className={clsx('col col--3')}>
       <div className="text--center">
-        <Svg className={styles.featureSvg} role="img" />
+        <img src={imgSrc} className={styles.featureSvg} alt={title} />
       </div>
       <div className="text--center padding-horiz--md">
         <Heading as="h3">{title}</Heading>

@@ -2,7 +2,7 @@
 sidebar_position: 1
 ---
 
-# Tutorial Introdução
+# Introdução
 
 Vamos descobrir como iniciar um projeto no Django
 

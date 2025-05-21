@@ -8,7 +8,7 @@ const FeatureList = [
     imgSrc: '/img/perfil_gabriela.svg',
     description: (
       <>
-        Texto descrevendo o que fez
+        Escreveu sobre Views e Models
       </>
     ),
   },
@@ -17,7 +17,7 @@ const FeatureList = [
     imgSrc: '/img/geovanna.svg',
     description: (
       <>
-        Texto descrevendo o que fez
+        Escreveu sobre Urls
       </>
     ),
   },
@@ -26,16 +26,16 @@ const FeatureList = [
     imgSrc: '/img/perfil_leticia.svg',
     description: (
       <>
-        Texto descrevendo o que fez
+        Escreveu a introdução e sobre o settings
       </>
     ),
   },
   {
     title: 'Raphaela Tavares',
-    imgSrc: '/img/undraw_docusaurus_tree.svg',
+    imgSrc: '/img/perfil_raphaela.svg',
     description: (
       <>
-        Texto descrevendo o que fez
+        Escreveu sobre o serializers
       </>
     ),
   },

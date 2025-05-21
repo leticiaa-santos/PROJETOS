@@ -76,7 +76,7 @@ const config = {
       // Replace with your project's social card
       image: 'img/docusaurus-social-card.jpg',
       navbar: {
-        title: 'My Site',
+        title: 'GaGiLeRa',
         logo: {
           alt: 'My Site Logo',
           src: 'img/logo.svg',
@@ -88,12 +88,7 @@ const config = {
             position: 'left',
             label: 'Tutorial',
           },
-          {to: '/blog', label: 'Blog', position: 'left'},
-          {
-            href: 'https://github.com/facebook/docusaurus',
-            label: 'GitHub',
-            position: 'right',
-          },
+          
         ],
       },
       footer: {
@@ -109,32 +104,23 @@ const config = {
             ],
           },
           {
-            title: 'Community',
+            title: 'GitHub',
             items: [
               {
-                label: 'Stack Overflow',
-                href: 'https://stackoverflow.com/questions/tagged/docusaurus',
+                label: 'Gabriela',
+                href: 'https://github.com/gabrielamelof',
               },
               {
-                label: 'Discord',
-                href: 'https://discordapp.com/invite/docusaurus',
+                label: 'Geovanna',
+                href: 'https://github.com/Getona',
               },
               {
-                label: 'X',
-                href: 'https://x.com/docusaurus',
-              },
-            ],
-          },
-          {
-            title: 'More',
-            items: [
-              {
-                label: 'Blog',
-                to: '/blog',
+                label: 'Letícia',
+                href: 'https://github.com/leticiaa-santos',
               },
               {
-                label: 'GitHub',
-                href: 'https://github.com/facebook/docusaurus',
+                label: 'Raphaela',
+                href: 'https://github.com/raphaelatf',
               },
             ],
           },
